@@ -7,11 +7,11 @@ WORKDIR /app
 # Copy the app package and package-lock.json file
 COPY package*.json ./
 
-# Copy local directordies to the current local directory of our docker image (/app)
+# Copy local direcies to the current local directory of our docker image (/app)
 COPY ./src ./src
 COPY ./public ./public
 
-# Install node packages, install serve, build the app, and remove dependencies at the end
+# Install node packages, install serve, build the ap, and remove dependencies at the end
 RUN npm install \
     && npm install -g serve \
     && npm run build \
